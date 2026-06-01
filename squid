@@ -1,0 +1,2 @@
+# patterns/squid
+SQUID3 %{NUMBER:timestamp}\s+%{NUMBER:duration}\s%{IP:client_ip}\s%{WORD:squid_status}/%{NUMBER:http_status}\s%{NUMBER:bytes_sent}\s%{WORD:http_method}\s%{NOTSPACE:url}\s%{NOTSPACE:user}\s%{WORD:hierarchy}/(?:%{IPORHOST:server}|-)\s%{NOTSPACE:content_type}
