@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   elasticsearch:
-    image: 172.24.11.237:6000/elasticsearch:8.11.3
+    image: elasticsearch:8.11.3
     container_name: elasticsearch
     environment:
       - discovery.type=single-node
@@ -21,7 +21,7 @@ services:
     restart: unless-stopped
 
   kibana:
-    image: 172.24.11.237:6000/kibana:8.11.3
+    image: kibana:8.11.3
     container_name: kibana
     environment:
       - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
@@ -36,7 +36,7 @@ services:
     restart: unless-stopped
 
   logstash:
-    image: 172.24.11.237:6000/logstash/logstash:8.11.3
+    image: logstash/logstash:8.11.3
     user: root
     container_name: logstash
     ports:
